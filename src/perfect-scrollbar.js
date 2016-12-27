@@ -145,6 +145,10 @@
         if (scrollbarXLeft >= containerWidth - scrollbarXWidth) {
           scrollbarXLeft = containerWidth - scrollbarXWidth;
         }
+        //
+        //  Вызываем событие каждый раз когда меняется позиция или размер слайдера
+        //
+        $this.trigger('perfect-scrollbar:change-size-and-position');
 
         updateScrollbarCss();
       };
